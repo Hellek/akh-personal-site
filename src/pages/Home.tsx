@@ -4,7 +4,8 @@ import { ReactComponent as Eye } from '../assets/icon/eye.svg'
 import { ReactComponent as Layers } from '../assets/icon/layers.svg'
 import { ReactComponent as Rose } from '../assets/icon/rose.svg'
 import { ReactComponent as Sun } from '../assets/icon/sun.svg'
-import logo from '../assets/images/logo.svg'
+import AlexPhoto from '../assets/images/alex-1@2x.png'
+import Logo from '../assets/images/logo.svg'
 
 const expertiseList = [
   'User Interface',
@@ -32,7 +33,7 @@ function Home(): ReactElement {
     <div className="min-h-screen">
       <div className="flex justify-between items-center text-2xl py-10">
         HOME
-        <img src={logo} alt="AKH logo" />
+        <img src={Logo} alt="AKH logo" />
         ABOUT
       </div>
 
@@ -60,6 +61,35 @@ function Home(): ReactElement {
           <div>{'59°56\'19.07" N'}</div>
           <div>{'30°18\'50.87" E'}</div>
         </div>
+      </div>
+
+      <div className="flex justify-center mt-28 mb-24 relative">
+        <div
+          className="absolute blur-[50px]"
+          style={{
+            background: 'linear-gradient(180deg, #FF7BCA 0%, rgba(255, 197, 111, 0.46) 100%)',
+            width: '362px',
+            height: '362px',
+            left: '340px',
+            top: '192px',
+          }}
+        />
+
+        <div
+          className="absolute blur-[100px]"
+          style={{
+            width: '456px',
+            height: '456px',
+            left: '616px',
+            top: '44px',
+            background: 'linear-gradient(180deg, #F22FB0 0%, rgba(245, 138, 37, 0) 100%, #7061A3 100%)',
+          }}
+        />
+        <img
+          src={AlexPhoto}
+          alt="Alex"
+          className="w-[416px] rounded-full z-10"
+        />
       </div>
 
       <div className="text-center">
