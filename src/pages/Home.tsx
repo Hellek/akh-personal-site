@@ -6,6 +6,14 @@ import { ReactComponent as Rose } from '../assets/icon/rose.svg'
 import { ReactComponent as Sun } from '../assets/icon/sun.svg'
 import AlexPhoto from '../assets/images/alex-1@2x.png'
 import { ReactComponent as Logo } from '../assets/images/logo.svg'
+import { ReactComponent as CooperVisionLogo } from '../assets/logos/CooperVision.svg'
+import { ReactComponent as DaSignalLogo } from '../assets/logos/DaSignal.svg'
+import { ReactComponent as EssilorLogo } from '../assets/logos/Essilor.svg'
+import { ReactComponent as MoscowMetroLogo } from '../assets/logos/MoscowMetro.svg'
+import { ReactComponent as SaprunLogo } from '../assets/logos/Saprun.svg'
+import { ReactComponent as SiemensLogo } from '../assets/logos/SIEMENS.svg'
+import { ReactComponent as SPIEFLogo } from '../assets/logos/SPIEF.svg'
+import { ReactComponent as TasstaLogo } from '../assets/logos/Tassta.svg'
 
 const expertiseList = [
   'User Interface',
@@ -23,6 +31,10 @@ const expertiseList = [
   <Layers key="Layers" className="w-[60px] h-[60px]" />,
   'Creative Strategy',
 ]
+
+function Title({ text }: { text: string }): ReactElement {
+  return <div className="mb-12 text-center font-medium text-red text-[80px]">{text}</div>
+}
 
 function Divider(): ReactElement {
   return <div className="bg-black h-0.5" />
@@ -92,8 +104,8 @@ function Home(): ReactElement {
         />
       </div>
 
-      <div className="text-center">
-        <div className="mb-12 text-red text-[80px]">Expertise</div>
+      <div>
+        <Title text="Expertise" />
 
         <div
           className="mx-auto mb-14 flex justify-center items-center flex-wrap max-w-[1170px]"
@@ -109,12 +121,29 @@ function Home(): ReactElement {
         })}
         </div>
 
-        <div className="text-4xl max-w-[800px] mx-auto mb-20">
+        <div className="text-4xl text-center max-w-[800px] mx-auto mb-20">
           Laser-focused at bringing value to the product.<br />
           I concentrate on a mix of lean design-systems for the product team,
           human-centric interfaces, and a little bit of design magic!<br /><br />
           With 15+ years in the game I worked with clients in a wide array of industries in Russia and around the world.
         </div>
+      </div>
+
+      <div>
+        <Title text="Also trusted by" />
+
+        <div className="mx-auto max-w-screen-xl flex justify-between items-center flex-wrap">
+          <SiemensLogo className="basis-1/4 mb-16" />
+          <EssilorLogo className="basis-1/4 mb-16" />
+          <SPIEFLogo className="basis-1/4 mb-16" />
+          <CooperVisionLogo className="basis-1/4 mb-16" />
+          <SaprunLogo className="basis-1/4 mb-16" />
+          <MoscowMetroLogo className="basis-1/4 mb-16" />
+          <DaSignalLogo className="basis-1/4 mb-16" />
+          <TasstaLogo className="basis-1/4 mb-16" />
+        </div>
+
+        <div className="text-4xl text-center mb-40">and many others</div>
       </div>
     </div>
   )
