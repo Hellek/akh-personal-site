@@ -5,7 +5,7 @@ import { ReactComponent as Layers } from '../assets/icon/layers.svg'
 import { ReactComponent as Rose } from '../assets/icon/rose.svg'
 import { ReactComponent as Sun } from '../assets/icon/sun.svg'
 import AlexPhoto from '../assets/images/alex-1@2x.png'
-import Logo from '../assets/images/logo.svg'
+import { ReactComponent as Logo } from '../assets/images/logo.svg'
 
 const expertiseList = [
   'User Interface',
@@ -33,7 +33,7 @@ function Home(): ReactElement {
     <div className="min-h-screen">
       <div className="flex justify-between items-center text-2xl py-10">
         HOME
-        <img src={Logo} alt="AKH logo" />
+        <Logo className="fill-red" />
         ABOUT
       </div>
 
