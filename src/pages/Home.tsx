@@ -1,6 +1,27 @@
 import { ReactElement } from 'react'
 
+import { ReactComponent as Eye } from '../assets/icon/eye.svg'
+import { ReactComponent as Layers } from '../assets/icon/layers.svg'
+import { ReactComponent as Rose } from '../assets/icon/rose.svg'
+import { ReactComponent as Sun } from '../assets/icon/sun.svg'
 import logo from '../assets/images/logo.svg'
+
+const expertiseList = [
+  'User Interface',
+  <Sun key="Sun" className="w-[60px] h-[60px]" />,
+  'UX Research',
+  'Product',
+  <Eye key="Eye" className="w-[60px] h-[60px]" />,
+  'Digital',
+  'Design Systems',
+  'Web',
+  'Communication',
+  <Rose key="Rose" className="w-[60px] h-[60px]" />,
+  'Print',
+  'Visual Identity',
+  <Layers key="Layers" className="w-[60px] h-[60px]" />,
+  'Creative Strategy',
+]
 
 function Divider(): ReactElement {
   return <div className="bg-black h-0.5" />
@@ -29,7 +50,7 @@ function Home(): ReactElement {
 
       <div className="mt-10 flex justify-between">
         <div className="flex-1">
-          BASED IN SAINT-PITERSBURG, RUSSIA<br />
+          BASED IN SAINT-PETERSBURG, RUSSIA<br />
           *AVAILABLE WORLDWIDE
         </div>
 
@@ -38,6 +59,31 @@ function Home(): ReactElement {
         <div className="flex-1 text-right">
           <div>{'59°56\'19.07" N'}</div>
           <div>{'30°18\'50.87" E'}</div>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <div className="mb-12 text-red text-[80px]">Expertise</div>
+
+        <div
+          className="mx-auto mb-14 flex justify-center items-center flex-wrap max-w-[1170px]"
+        >{expertiseList.map(item => {
+          if (typeof item !== 'string') return item
+          return (
+            <div
+              key={item}
+              className="py-3 px-8 my-2 mx-2.5 border-2 rounded-full text-6xl leading-none"
+            >{item}
+            </div>
+          )
+        })}
+        </div>
+
+        <div className="text-4xl max-w-[800px] mx-auto mb-20">
+          Laser-focused at bringing value to the product.<br />
+          I concentrate on a mix of lean design-systems for the product team,
+          human-centric interfaces, and a little bit of design magic!<br /><br />
+          With 15+ years in the game I worked with clients in a wide array of industries in Russia and around the world.
         </div>
       </div>
     </div>
